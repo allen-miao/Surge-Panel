@@ -61,7 +61,7 @@ function getUserInfo(url) {
         resolve(resp.headers[header]);
         return;
       }
-      reject("链接响应头不带有流量信息");
+      reject("The link response header does not carry traffic information.");
     })
   );
 }
