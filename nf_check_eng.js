@@ -3,11 +3,11 @@ const FILM_ID = 81215567
 const AREA_TEST_FILM_ID = 80018499
 const DEFAULT_OPTIONS = {
   title: 'Netflix Unlock Detection',
-  fullContent: 'Full support for Netflix, region: #REGION_FLAG# #REGION_NAME_EN#',
+  fullContent: 'Full support for Netflix, region: #REGION_NAME_EN#',
   fullIcon: '',
   fullIconColor: '',
   fullStyle: 'good',
-  onlyOriginalContent: 'Only supports self-made drama, region: #REGION_FLAG# #REGION_NAME_EN#',
+  onlyOriginalContent: 'Only supports self-made drama, region: #REGION_NAME_EN#',
   onlyOriginalIcon: '',
   onlyOriginalIconColor: '',
   onlyOriginalStyle: 'info',
@@ -166,7 +166,7 @@ function getOptions() {
       )
       Object.assign(options, params)
     } catch (error) {
-      console.error(`$argument 解析失败，$argument: + ${argument}`)
+      console.error(`$argument Parsing failed, $argument: + ${argument}`)
     }
   }
 
