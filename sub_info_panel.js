@@ -8,14 +8,14 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`Dosage：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`Dosage: ${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`Reset remaining days：${resetDayLeft}`);
+    content.push(`Reset remaining days: ${resetDayLeft}`);
   }
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`Expires：${formatTime(expire)}`);
+    content.push(`Expires: ${formatTime(expire)}`);
   }
 
   let now = new Date();
