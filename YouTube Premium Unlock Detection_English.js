@@ -126,7 +126,7 @@ function getOptions() {
       )
       Object.assign(options, params)
     } catch (error) {
-      console.error(`$argument 解析失败，$argument: + ${argument}`)
+      console.error(`$argument Parsing failed, $argument: + ${argument}`)
     }
   }
 
