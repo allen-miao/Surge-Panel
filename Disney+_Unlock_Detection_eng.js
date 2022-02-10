@@ -12,7 +12,7 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
-  title: 'Disney+ Unlock Detection',
+  title: 'Disney+ Unlock Detection.',
   availableContent: 'Support for Disney+, region: #REGION_NAME_EN#',
   availableIcon: undefined,
   availableIconColor: undefined,
