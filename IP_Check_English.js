@@ -7,7 +7,7 @@ $httpClient.get(url, function(error, response, data){
     let city = jsonData.city
     let isp = jsonData.isp
   body = {
-    title: "Node information",
+    title: "Node Information",
     content: `IP address: ${country} - ${city}\nOperator: ${isp}`,
     icon: "globe.asia.australia.fill"
   }
