@@ -8,7 +8,7 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`Dosage: ${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`Dosage: ${bytesToSize(used)} / ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
     content.push(`Reset remaining days: ${resetDayLeft}`);
@@ -25,7 +25,7 @@ let args = getArgs();
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title} | Last refresh time: ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
