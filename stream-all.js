@@ -32,11 +32,11 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="Disney+: Comming soon."+region.toUpperCase()
+        disney_result="Disney+: Comming soon."
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: Unlocked, region: "+region.toUpperCase()
+        disney_result="Disney+: Unlocked. "
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -95,11 +95,11 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += 'Not supported.'
         } else {
-          youtube_check_result += 'Unlocked, region: ' + code.toUpperCase()
+          youtube_check_result += 'Unlocked.: '
         }
       })
       .catch((error) => {
-        youtube_check_result += 'Detection failed, please refresh the panel.'
+        youtube_check_result += 'Detection failed, please refresh.'
       })
   
     return youtube_check_result
@@ -151,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += 'Fully unlocked, region: ' + code.toUpperCase()
+        netflix_check_result += 'Fully unlocked.: '
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -159,7 +159,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += 'Unlocks original episodes only, region: ' + code.toUpperCase()
+        netflix_check_result += 'Unlocks Netflix originals only.'
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -170,7 +170,7 @@ panel_result['content'] = content
           netflix_check_result += 'Unlocking is not supported.'
           return
         }
-        netflix_check_result += 'Detection failed, please refresh the panel.'
+        netflix_check_result += 'Detection failed, please refresh.'
       })
   
     return netflix_check_result
