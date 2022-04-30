@@ -95,7 +95,7 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += 'Not supported.'
         } else {
-          youtube_check_result += 'Unlocked.: '
+          youtube_check_result += 'Unlocked.'
         }
       })
       .catch((error) => {
@@ -151,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += 'Fully unlocked.: '
+        netflix_check_result += 'Fully unlocked. '
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
